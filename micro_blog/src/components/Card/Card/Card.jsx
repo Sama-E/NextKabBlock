@@ -11,7 +11,9 @@ const Card = () => {
           <Image src={item.img} alt="" fill className={styles.image} />
         </div>
       )} */}
-      <Image src="" alt="" fill className={styles.image} />
+        <div className={styles.imageContainer}>
+          <Image src="" alt="" fill className={styles.image} />
+        </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>
           <span className={styles.date}>
