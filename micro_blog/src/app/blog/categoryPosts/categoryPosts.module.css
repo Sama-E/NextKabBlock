@@ -1,0 +1,14 @@
+.title{
+  /* background-color: rgb(140, 115, 106); */
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-text-stroke: .5px black;
+  /* -webkit-text-fill-color: white; */
+}
+
+.content{
+  display: flex;
+  gap: 50px;
+}
