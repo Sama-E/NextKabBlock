@@ -51,4 +51,4 @@ const AuthLinks = () => {
   )
 }
 
-export default AuthLinks
+export default AuthLinks;
