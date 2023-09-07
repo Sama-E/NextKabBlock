@@ -10,6 +10,7 @@ const AuthLinks = () => {
 
   return (
     <>
+      {/* Desktop Menu */}
       {status === "unauthenticated" ? (
         <Link href="/login" className={styles.link}>
           Login
@@ -25,6 +26,7 @@ const AuthLinks = () => {
         </>
       )}
 
+      {/* Mobile Menu */}
       <div className={styles.burger} onClick={() => setOpen(!open)}>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
@@ -40,11 +42,10 @@ const AuthLinks = () => {
             <Link href="/login">Login</Link>
           ) : (
             <>
-              <Link href="/write">Write</Link>
+              <Link href="/blog/writePost">Write</Link>
               <span className={styles.link}>Logout</span>
             </>
           )}
-
         </div>
       )}
     </>

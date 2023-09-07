@@ -1,12 +1,12 @@
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { Prisma } from "@prisma/client";
+import prisma from "./connect";
 
 export const authOptions = {
   // DB - Prisma Adapter - npx prisma generate
   // RDBMS - npx prisma migrate
-  adapter: PrismaAdapter(Prisma),
+  adapter: PrismaAdapter(prisma),
   // Auth - Google & Facebook Providers
   providers: [
     GoogleProvider({
