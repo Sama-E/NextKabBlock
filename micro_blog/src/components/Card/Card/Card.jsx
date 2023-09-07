@@ -13,7 +13,7 @@ import Link from "next/link";
         </div>
       )} */}
         <div className={styles.imageContainer}>
-          <Image src="" alt="" fill className={styles.image} />
+          {/* <Image src="" alt="" fill className={styles.image} /> */}
         </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>
