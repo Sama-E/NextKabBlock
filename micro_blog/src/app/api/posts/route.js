@@ -19,15 +19,15 @@ export const GET = async (req) => {
     const query = {
       take: POST_PER_PAGE,
       skip: POST_PER_PAGE * (page - 1),
-    //   // where: {
-    //   //   ...(cat && { catSlug: cat }),
-    //   // },
+      where: {
+        ...(cat && { catSlug: cat }),
+      },
     };
     const [posts, count] = await prisma.$transaction([
       prisma.post.findMany(query),
       // Pagination count + category pagination count
-      // prisma.post.count({ where: query.where }),
-      prisma.post.count(),
+      prisma.post.count({ where: query.where }),
+      // prisma.post.count(),
     ]);
 
     return new NextResponse(JSON.stringify({posts, count}, { status: 200 }));
