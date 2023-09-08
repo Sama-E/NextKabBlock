@@ -23,27 +23,23 @@
   border-radius: 10px;
 }
 
-.category.style {
+.category.realestate {
   background-color: #57c4ff31;
 }
 
-.category.fashion {
+.category.culture {
   background-color: #da85c731;
 }
 
-.category.food {
+.category.economics {
   background-color: #7fb88133;
 }
 
-.category.travel {
+.category.technology {
   background-color: #ff795736;
 }
 
-.category.culture {
-  background-color: #ffb04f45;
-}
-
-.category.coding {
+.category.law {
   background-color: #5e4fff31;
 }
 

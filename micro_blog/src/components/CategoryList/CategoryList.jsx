@@ -3,26 +3,27 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Categories
-// const getData = async () => {
-//   const res = await fetch("http://localhost:3000/api/categories", {
-//     cache: "no-store",
-//   });
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+    // cache: "default", - nextjs constantly cache
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Failed");
-//   }
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
-const CategoryList = () => {
-  // const data = await getData();
+const CategoryList = async () => {
+  const data = await getData();
 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        {/* {data?.map((item) => (
+        {data?.map((item) => (
           <Link
             href="/blog?cat=style"
             className={`${styles.category} ${styles[item.slug]}`}
@@ -39,59 +40,7 @@ const CategoryList = () => {
             )}
             {item.title}
           </Link>
-        ))} */}
-        <Link
-          href="/blog?cat=style"
-          className={`${styles.category} ${styles.style}`}
-        >
-          <Image
-            src="/style.png"
-            alt=""
-            width={32}
-            height={32}
-            className={styles.image}
-          />
-          Style
-        </Link>
-        <Link
-          href="/blog?cat=style"
-          className={`${styles.category} ${styles.culture}`}
-        >
-          <Image
-            src="/culture.png"
-            alt=""
-            width={32}
-            height={32}
-            className={styles.image}
-          />
-          Culture
-        </Link>
-        <Link
-          href="/blog?cat=style"
-          className={`${styles.category} ${styles.food}`}
-        >
-          <Image
-            src="/food.png"
-            alt=""
-            width={32}
-            height={32}
-            className={styles.image}
-          />
-          Food
-        </Link>
-        <Link
-          href="/blog?cat=style"
-          className={`${styles.category} ${styles.travel}`}
-        >
-          <Image
-            src="/travel.png"
-            alt=""
-            width={32}
-            height={32}
-            className={styles.image}
-          />
-          Travel
-        </Link>
+        ))}
       </div>
     </div>
   )

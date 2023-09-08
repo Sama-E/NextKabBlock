@@ -5,8 +5,8 @@ import "react-quill/dist/quill.bubble.css";
 import ReactQuill from "react-quill";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import { useRouter } from "next/navigation";
-// import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 // import {
 //   getStorage,
 //   ref,
@@ -16,8 +16,8 @@ import { useEffect, useState } from "react";
 // import { app } from "@/utils/firebase";
 
 const WritePost = () => {
-  // const { status } = useSession();
-  // const router = useRouter();
+  const { status } = useSession();
+  const router = useRouter();
 
   const [open, setOpen] = useState(false);
   // const [file, setFile] = useState(null);
@@ -61,13 +61,13 @@ const WritePost = () => {
   //   file && upload();
   // }, [file]);
 
-  // if (status === "loading") {
-  //   return <div className={styles.loading}>Loading...</div>;
-  // }
+  if (status === "loading") {
+    return <div className={styles.loading}>Loading...</div>;
+  }
 
-  // if (status === "unauthenticated") {
-  //   router.push("/");
-  // }
+  if (status === "unauthenticated") {
+    router.push("/");
+  }
 
   // const slugify = (str) =>
   //   str
