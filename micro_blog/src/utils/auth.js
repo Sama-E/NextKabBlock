@@ -2,6 +2,7 @@ import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prisma from "./connect";
+import { getServerSession } from "next-auth";
 
 export const authOptions = {
   // DB - Prisma Adapter - npx prisma generate
@@ -18,4 +19,6 @@ export const authOptions = {
       clientSecret: process.env.FACEBOOK_SECRET,
     }),
   ],
-}
+};
+
+export const getAuthSession = () => getServerSession(authOptions);

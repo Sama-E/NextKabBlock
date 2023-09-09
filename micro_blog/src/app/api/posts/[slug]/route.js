@@ -1,7 +1,7 @@
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 
-// Single Post GET route
+// GET SINGLE POST
 export const GET = async (req, {params}) => {
   const { slug } = params;
 
