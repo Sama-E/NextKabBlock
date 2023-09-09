@@ -22,17 +22,17 @@ const Card = ({ key, item }) => {
           <span className={styles.category}>{item.catSlug}</span>
           {/* <span className={styles.category}> Category</span> */}
         </div>
-        {/* <Link href={`/posts/${item.slug}`}>
-          <h1>{item.title}</h1> */}
-        <Link href="">
+        <Link href={`/blog/singlePost/${item.slug}`}>
           <h1>{item.title}</h1>
+        {/* <Link href="">
+          <h1>{item.title}</h1> */}
         </Link>
         
         {/* <div className={styles.desc} dangerouslySetInnerHTML={{ __html: item?.desc.substring(0,60) }}/> */}
-        <div className={styles.desc} />
+        {/* <div className={styles.desc} /> */}
         <p className={styles.desc}>{item.desc.substring(0, 260)}</p>
-        {/* <Link href={`/posts/${item.slug}`} className={styles.link}> */}
-        <Link href="" className={styles.link}>
+        <Link href={`/blog/singlePost/${item.slug}`} className={styles.link}>
+        {/* <Link href="" className={styles.link}> */}
           Read More
         </Link>
       </div>
