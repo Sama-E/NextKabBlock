@@ -4,12 +4,15 @@ import MenuPosts from "../MenuPosts/MenuPosts";
 import styles from "./menu.module.css";
 import Link from "next/link";
 
-const Menu = () => {
+const Menu = ({cat}) => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.subtitle}>{"What's hot"}</h2>
+      {/* <h2 className={styles.subtitle}>{"What's hot"}</h2>
       <h1 className={styles.title}>Most Popular</h1>
-      <MenuPosts withImage={false} />
+      <MenuPosts withImage={false}  cat={cat} /> */}
+      <h2 className={styles.subtitle}>{"What's hot"}</h2>
+      <h1 className={styles.title}>Similar Posts</h1>
+      <MenuPosts withImage={false}  cat={cat} />
       <h2 className={styles.subtitle}>Discover by topic</h2>
       <h1 className={styles.title}>Categories</h1>
       <MenuCategories />

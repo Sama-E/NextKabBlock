@@ -2,7 +2,7 @@ import styles from "./menuPosts.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const MenuPosts = ({ withImage }) => {
+const MenuPosts = ({ withImage, cat }) => {
   return (
     <div className={styles.items}>
       <Link href="/" className={styles.item}>
@@ -30,7 +30,7 @@ const MenuPosts = ({ withImage }) => {
         )}
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.culture}`}>
-            Culture
+            Culture {cat}
           </span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

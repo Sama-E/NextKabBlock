@@ -57,7 +57,7 @@ const SinglePost = async ({ params }) => {
           <Comments postSlug={slug}/>
         </div>
       </div>
-      <Menu />
+      <Menu cat={data.catSlug}/>
     </div>
   </div>
   )
