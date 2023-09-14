@@ -70,6 +70,7 @@ const WritePost = () => {
     router.push("/");
   }
 
+  // Title slug
   const slugify = (str) =>
     str
       .toLowerCase()
