@@ -79,6 +79,7 @@ const WritePost = () => {
       .replace(/[\s_-]+/g, "-")
       .replace(/^-+|-+$/g, "");
 
+  //Submit
   const handleSubmit = async () => {
     const res = await fetch("http://localhost:3000/api/posts", {
       method: "POST",
