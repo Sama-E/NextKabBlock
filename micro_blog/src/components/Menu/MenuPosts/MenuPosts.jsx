@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MenuPosts = ({ withImage, cat }) => {
+
   return (
     <div className={styles.items}>
       <Link href="/" className={styles.item}>

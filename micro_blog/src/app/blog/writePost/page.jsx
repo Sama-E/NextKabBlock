@@ -106,6 +106,7 @@ const WritePost = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
+
     <div className={styles.options}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
         {/* <button className={styles.button}> */}
