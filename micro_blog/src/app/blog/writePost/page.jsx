@@ -19,10 +19,10 @@ const WritePost = () => {
   const { status } = useSession();
   const router = useRouter();
 
+  const [file, setFile] = useState(null);
   const [open, setOpen] = useState(false);
-  // const [file, setFile] = useState(null);
+  const [value, setValue] = useState("");
   // const [media, setMedia] = useState("");
-  // const [value, setValue] = useState("");
   // const [title, setTitle] = useState("");
   // const [catSlug, setCatSlug] = useState("");
 
@@ -114,7 +114,7 @@ const WritePost = () => {
             <input
               type="file"
               id="image"
-              // onChange={(e) => setFile(e.target.files[0])}
+              onChange={(e) => setFile(e.target.files[0])}
               style={{ display: "none" }}
             />
             <button className={styles.addButton}>
