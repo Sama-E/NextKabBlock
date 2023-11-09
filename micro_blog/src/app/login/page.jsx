@@ -27,7 +27,27 @@ const Login = () => {
         <div className={styles.socialButton} onClick={() => signIn("google")}>
           Sign in with Google
         </div>
-        {/* <div className={styles.socialButton}>Sign in with Facebook</div> */}
+        <div className={styles.socialButton}>Sign in with Github</div>
+      </div>
+      <div className={styles.wrapper2}>
+        <form className={styles.form}>
+          <h1>Login</h1>
+          <input
+            required
+            type="email"
+            placeholder="Email"
+            name="email"
+            className={styles.inputs}
+          />
+          <input
+            required
+            type="password"
+            placeholder="Password"
+            name="password"
+            className={styles.inputs}
+            />
+          <button className={styles.submitButton}>Login</button>
+        </form>
       </div>
     </div>
   )

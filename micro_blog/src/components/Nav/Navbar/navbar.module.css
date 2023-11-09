@@ -21,6 +21,7 @@
 .links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
   flex: 1;
   font-size: 20px;
@@ -32,6 +33,7 @@
   }
   .links {
     font-size: 18px;
+    justify-content: flex-end;
     gap: 15px;
   }
 }

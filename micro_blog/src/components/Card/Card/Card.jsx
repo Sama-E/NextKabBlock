@@ -22,9 +22,7 @@ const Card = ({ key, item }) => {
           <h1>{item.title}</h1>
         </Link>
         
-        <div className={styles.desc} dangerouslySetInnerHTML={{ __html: item?.desc.substring(0,60) }}/>
-
-        <p className={styles.desc}>{item.desc.substring(0, 260)}</p>
+        <p className={styles.desc} dangerouslySetInnerHTML={{ __html: item?.desc.substring(0,400) }}/>
 
         <Link href={`/blog/singlePost/${item.slug}`} className={styles.link}>
           Read More

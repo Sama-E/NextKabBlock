@@ -10,15 +10,15 @@ const Menu = ({cat, searchParams}) => {
       {/* <h2 className={styles.subtitle}>{"What's hot"}</h2>
       <h1 className={styles.title}>Most Popular</h1>
       <MenuPosts withImage={false}  cat={cat} /> */}
-      <h2 className={styles.subtitle}>{"What's hot"}</h2>
+      {/* <h2 className={styles.subtitle}>{"What's hot"}</h2>
       <h1 className={styles.title}>Similar Posts</h1>
-      <MenuPosts withImage={false}  cat={cat} searchParams={searchParams} />
-      <h2 className={styles.subtitle}>Discover by topic</h2>
-      <h1 className={styles.title}>Categories</h1>
-      <MenuCategories />
+      <MenuPosts withImage={false}  cat={cat} searchParams={searchParams} /> */}
       <h2 className={styles.subtitle}>Chosen by the editor</h2>
       <h1 className={styles.title}>Editors Pick</h1>
       <MenuPosts withImage={true} />
+      <h2 className={styles.subtitle}>Discover by topic</h2>
+      <h1 className={styles.title}>Categories</h1>
+      <MenuCategories />
     </div>
   )
 }

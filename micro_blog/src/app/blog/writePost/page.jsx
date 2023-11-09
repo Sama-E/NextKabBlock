@@ -134,11 +134,11 @@ const WritePost = () => {
           </div>
         )}
         <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
-          <option value="Realty">Realty</option>
-          <option value="Economics">Economics</option>
-          <option value="Technology">Technology</option>
-          <option value="Culture">Culture</option>
-          <option value="Law">Law</option>
+          <option value="Blockchain">Blockchain</option>
+          <option value="DataStructure">Data Structure</option>
+          <option value="TeamCulture">Team Culture</option>
+          <option value="SDLC">SDLC</option>
+          <option value="Design">Design</option>
         </select>
       </div>
       <div className={styles.editor}>
