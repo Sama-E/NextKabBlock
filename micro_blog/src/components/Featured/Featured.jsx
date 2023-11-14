@@ -1,7 +1,26 @@
 import styles from "./featured.module.css";
 import Image from "next/image";
 
-const Featured = () => {
+
+const getData = async (page, featured) => {
+  const res = await fetch(
+    `http://localhost:3000/api/posts?page=${page}`,
+    {
+      cache: "no-store",
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const Featured = async ({page, featured}) => {
+
+  const { post } = await getData(page, featured);
+
   return (
     <div className={styles.container}>
       <div className={styles.post}>
