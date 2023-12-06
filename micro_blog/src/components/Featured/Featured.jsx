@@ -1,10 +1,11 @@
+import Link from "next/link";
 import styles from "./featured.module.css";
 import Image from "next/image";
 
 
-const getData = async (page, featured) => {
+const getData = async () => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}`,
+    `http://localhost:3000/api/featured`,
     {
       cache: "no-store",
     }
@@ -17,30 +18,30 @@ const getData = async (page, featured) => {
   return res.json();
 };
 
-const Featured = async ({page, featured}) => {
+const Featured = async () => {
 
-  const { post } = await getData(page, featured);
+  const item  = await getData();
 
   return (
     <div className={styles.container}>
       <div className={styles.post}>
+
+      {item[0].img && (
         <div className={styles.imgContainer}>
-          <Image src="/p1.jpeg"
+          <Image src={item[0].img}
             alt="" 
             fill
             sizes="100vw"
             className={styles.image} />
         </div>
-        <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}>Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
-          <p className={styles.postDesc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
-          </p>
-          <button className={styles.button}>Read More</button>
-        </div>
+      )}
+          <div className={styles.textContainer}>
+            <h1 className={styles.postTitle}>{item[0].title}</h1>
+            <p className={styles.postDesc} dangerouslySetInnerHTML={{ __html: item[0]?.desc.substring(0,280) }}/>
+            <Link href={`/blog/singlePost/${item[0].slug}`}>
+              <button className={styles.button}>Read More</button>
+            </Link>
+          </div>
       </div>
     </div>
   )

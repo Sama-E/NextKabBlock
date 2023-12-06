@@ -37,9 +37,13 @@ export const authOptions = {
         // This is where you need to retrieve user data 
         // to verify with credentials
         // Docs: https://next-auth.js.org/configuration/providers/credentials
-        const user = { id: "42", name: "Guest", password: "Password" }
+        const user = { 
+          id: "clpt29j0v0000m8a0jo3758n1", 
+          name: "Guest", 
+          email: "guest@guest.com", 
+          password: "Password" }
 
-        if (credentials?.username === user.name && credentials?.password === user.password) {
+        if (credentials?.email === user.email) {
             return user
         } else {
             return null

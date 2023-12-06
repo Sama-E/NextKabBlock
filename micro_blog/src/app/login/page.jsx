@@ -29,7 +29,7 @@ const Login = () => {
         </div>
         <div className={styles.socialButton}>Sign in with Github</div>
       </div>
-      <div className={styles.wrapper2}>
+      {/* <div className={styles.wrapper2}>
         <form className={styles.form}>
           <h1>Login</h1>
           <input
@@ -48,7 +48,7 @@ const Login = () => {
             />
           <button className={styles.submitButton}>Login</button>
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }

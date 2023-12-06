@@ -73,7 +73,7 @@ model Post {
   slug        String    @unique
   title       String
   desc        String
-  featured    String?
+  featured    Boolean    @default(false)
   editorpick  String?
   img         String?
   views       Int       @default(0)
