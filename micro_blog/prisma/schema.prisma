@@ -74,7 +74,7 @@ model Post {
   title       String
   desc        String
   featured    Boolean    @default(false)
-  editorpick  String?
+  // editorpick  String?
   img         String?
   views       Int       @default(0)
   catSlug     String
