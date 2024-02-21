@@ -1,0 +1,11 @@
+.link {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .link{
+    display: none;
+  }
+}

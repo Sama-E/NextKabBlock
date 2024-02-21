@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
+import AdminLink from "../adminLink/AdminLink";
 
 const Navbar = () => {
+
   return (
     <div className={styles.container}>
       {/* <div className={styles.social}>
@@ -18,6 +20,7 @@ const Navbar = () => {
       <Link href="/" className={styles.logo}>Next Kab [Block]</Link>
       <div className={styles.links}>
         <ThemeToggle />
+        {/* <AdminLink /> */}
         <Link href="/" className={styles.link}>Contact</Link>
         <Link href="/" className={styles.link}>About</Link>
         <AuthLinks />

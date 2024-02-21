@@ -3,11 +3,12 @@ import Link from "next/link";
 import styles from "./authLinks.module.css";
 import { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
+import AdminLink from "../adminLink/AdminLink";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
 
-  const { status } = useSession();
+  const { data, status } = useSession();
 
   return (
     <>
@@ -17,9 +18,12 @@ const AuthLinks = () => {
         </Link>
       ) : (
         <>
-          <Link href="/write" className={styles.link}>
-            Write
-          </Link>
+        {data && data.user.role === "ADMIN" ? 
+          (
+            <AdminLink />
+          ) : ("")
+        }
+        
           <span className={styles.link} onClick={signOut}>
             Logout
           </span>
@@ -39,7 +43,7 @@ const AuthLinks = () => {
             <Link href="/login">Login</Link>
           ) : (
             <>
-              <Link href="/write">Write</Link>
+              {/* <Link href="/write">Write</Link> */}
               <span className={styles.link}>Logout</span>
             </>
           )}
