@@ -23,27 +23,27 @@
   border-radius: 10px;
 }
 
-.category.style {
+.category.dev {
   background-color: #57c4ff31;
 }
 
-.category.fashion {
+.category.data {
   background-color: #da85c731;
 }
 
-.category.food {
+.category.blockchain {
   background-color: #7fb88133;
 }
 
-.category.travel {
+.category.security {
   background-color: #ff795736;
 }
 
-.category.culture {
+.category.histories {
   background-color: #ffb04f45;
 }
 
-.category.coding {
+.category.ai {
   background-color: #5e4fff31;
 }
 

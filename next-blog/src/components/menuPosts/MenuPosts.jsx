@@ -13,7 +13,7 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.travel}`}>Travel</span>
+          <span className={`${styles.category} ${styles.dev}`}>Dev</span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
@@ -30,8 +30,8 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.culture}`}>
-            Culture
+          <span className={`${styles.category} ${styles.data}`}>
+            Data
           </span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -49,7 +49,7 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.food}`}>Food</span>
+          <span className={`${styles.category} ${styles.blockchain}`}>Blockchain</span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
@@ -66,8 +66,8 @@ const MenuPosts = ({ withImage }) => {
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.fashion}`}>
-            Fashion
+          <span className={`${styles.category} ${styles.security}`}>
+            Security
           </span>
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

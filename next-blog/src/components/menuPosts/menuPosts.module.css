@@ -39,28 +39,28 @@
   width: max-content;
 }
 
-.category.travel {
-  background-color: #ff7857;
+.category.dev {
+  background-color: #57c4ff31;
 }
 
-.culture {
-  background-color: #ffb14f;
+.category.data {
+  background-color: #da85c731;
 }
 
-.food {
-  background-color: #7fb881;
+.category.blockchain {
+  background-color: #7fb88133;
 }
 
-.fashion {
-  background-color: #ff7887;
+.category.security {
+  background-color: #ff795736;
 }
 
-.coding {
-  background-color: #775aec;
+.category.histories {
+  background-color: #ffb04f45;
 }
 
-.style {
-  background-color: #789cff;
+.category.ai {
+  background-color: #5e4fff31;
 }
 
 .postTitle {
