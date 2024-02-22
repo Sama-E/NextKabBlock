@@ -12,8 +12,8 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
-import { app } from "@/utils/firebase";
 import ReactQuill from "react-quill";
+import { app } from "@/utils/firebase";
 
 const tags = [
   {
@@ -73,9 +73,12 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  const [editorsPick, setEditorsPick] = useState("")
+  
 
   useEffect(() => {
     const storage = getStorage(app);
+
     const upload = () => {
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
@@ -143,17 +146,17 @@ const WritePage = () => {
     }
   };
 
-  function addTag(e){
-    if (e.key !== 'Enter') return
-    const value = e.target.value
-    if(!value.trim()) return
-    setTags([...tags, value])
-    e.target.value = ''
-  }
+  // function addTag(e){
+  //   if (e.key !== 'Enter') return
+  //   const value = e.target.value
+  //   if(!value.trim()) return
+  //   setTags([...tags, value])
+  //   e.target.value = ''
+  // }
 
-  function removeTag(index){
-    setTags(tags.filter((el, i) => i !== index))
-  }
+  // function removeTag(index){
+  //   setTags(tags.filter((el, i) => i !== index))
+  // }
 
   return (
     <div className={styles.container}>
@@ -207,19 +210,31 @@ const WritePage = () => {
           </div>
         </div>
 
-        {/* <div className={styles.boxTwo}>
-          enter some tags ...
-          <div className={styles.tagsInputContainer}>
+        <div className={styles.boxTwo}>
+          {/* <div>
+            enter some tags ...
+            <div className={styles.tagsInputContainer}>
 
-            { tags.map((tag, index) => (
-              <div className={styles.tagsItem} key={index}>
-                <span className={styles.tagsText}> {tag} </span>
-                <span className={styles.tagsClose} onClick={() => removeTag(index)}> &times; </span>
-              </div>
-            ))}
-            <input className={styles.tagsInput} onKeyDown={addTag} type="text" placeholder="Type something" />
+              { tags.map((tag, index) => (
+                <div className={styles.tagsItem} key={index}>
+                  <span className={styles.tagsText}> {tag} </span>
+                  <span className={styles.tagsClose} onClick={() => removeTag(index)}> &times; </span>
+                </div>
+              ))}
+              <input className={styles.tagsInput} onKeyDown={addTag} type="text" placeholder="Type something" />
+            </div>
+          </div> */}
+          <div>
+            <input 
+              className={styles.checkbox}
+              type="checkbox" 
+              id="editorsPick" 
+              name="editorsPick"             
+              onClick={() => setEditorsPick(true)}
+            />
+            <label className={styles.label}>Editor's Pick</label>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className={styles.editor}>

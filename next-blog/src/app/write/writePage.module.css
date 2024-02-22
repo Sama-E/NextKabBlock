@@ -26,9 +26,19 @@
 
 .select{
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   padding: 10px 20px;
   width: max-content;
+  font-size: large;
+}
+
+.label {
+  margin-left: 10px;
+  font-size: large;
+}
+
+.checkbox {
+  transform: scale(1.5);
 }
 
 .tagsInputContainer {
