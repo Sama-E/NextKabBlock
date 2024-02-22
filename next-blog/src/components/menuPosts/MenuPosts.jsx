@@ -18,7 +18,6 @@ const getData = async () => {
 
 const MenuPosts = async ({ withImage }) => {
   const data = await getData();
-  // console.log(data)
 
   return (
     <div className={styles.items}>
@@ -36,7 +35,7 @@ const MenuPosts = async ({ withImage }) => {
               {item.title}
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>John Doe</span>
+              {/* <span className={styles.username}>John Doe</span> */}
               <span className={styles.date}>{" "}{item.createdAt.substring(0, 10)}</span>
             </div>
           </div>

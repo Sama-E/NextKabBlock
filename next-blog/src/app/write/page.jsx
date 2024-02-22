@@ -14,6 +14,7 @@ import {
 } from "firebase/storage";
 import ReactQuill from "react-quill";
 import { app } from "@/utils/firebase";
+import { initializeApp } from 'firebase/app';
 
 const tags = [
   {
@@ -73,7 +74,8 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
-  const [editorsPick, setEditorsPick] = useState("")
+  const [editorsPick, setEditorsPick] = useState(false)
+  console.log(editorsPick)
   
 
   useEffect(() => {
@@ -136,7 +138,8 @@ const WritePage = () => {
         desc: value,
         img: media,
         slug: slugify(title),
-        catSlug: catSlug || "style", //If not selected, choose the general category
+        editorsPick,
+        catSlug: catSlug || "dev", //If not selected, choose the general category
       }),
     });
 
@@ -145,6 +148,10 @@ const WritePage = () => {
       router.push(`/posts/${data.slug}`);
     }
   };
+
+const addEditorsPick = () => {
+  setEditorsPick(!editorsPick);
+}
 
   // function addTag(e){
   //   if (e.key !== 'Enter') return
@@ -229,8 +236,9 @@ const WritePage = () => {
               className={styles.checkbox}
               type="checkbox" 
               id="editorsPick" 
-              name="editorsPick"             
-              onClick={() => setEditorsPick(true)}
+              name="editorsPick"
+              checked = {editorsPick}            
+              onChange={addEditorsPick}
             />
             <label className={styles.label}>Editor's Pick</label>
           </div>
