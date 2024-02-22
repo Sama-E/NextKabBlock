@@ -28,7 +28,7 @@
   flex: 4;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .category {
@@ -40,27 +40,27 @@
 }
 
 .category.dev {
-  background-color: #57c4ff31;
+  background-color: #245068da;
 }
 
 .category.data {
-  background-color: #da85c731;
+  background-color: #da85c8d7;
 }
 
 .category.blockchain {
-  background-color: #7fb88133;
+  background-color: #7fb881d6;
 }
 
 .category.security {
-  background-color: #ff795736;
+  background-color: #ff7957d6;
 }
 
 .category.histories {
-  background-color: #ffb04f45;
+  background-color: #ffb04fd8;
 }
 
 .category.ai {
-  background-color: #5e4fff31;
+  background-color: #5e4fffd9;
 }
 
 .postTitle {

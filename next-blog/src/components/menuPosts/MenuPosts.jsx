@@ -6,6 +6,27 @@ import styles from "./menuPosts.module.css"
 const MenuPosts = ({ withImage }) => {
   return (
     <div className={styles.items}>
+
+      {/* {data?.map((item) => (
+        <Link href={`/posts/${item.slug}`} className={styles.item}>
+          {withImage && (
+            <div className={styles.imageContainer}>
+              <Image src={item.img} alt="" fill className={styles.image} />
+            </div>
+          )}
+          <div className={styles.textContainer}>
+            <span className={`${styles.category} ${styles[item.slug]}`}>Dev</span>
+            <h3 className={styles.postTitle}>
+              {item.title}
+            </h3>
+            <div className={styles.detail}>
+              <span className={styles.username}>John Doe</span>
+              <span className={styles.date}>{item.createdAt.substring(0, 10)} -{" "}</span>
+            </div>
+          </div>
+        </Link>
+      ))} */}
+
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
@@ -18,11 +39,12 @@ const MenuPosts = ({ withImage }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            {/* <span className={styles.username}>John Doe</span> */}
+            <span className={styles.date}>10.03.2023</span>
           </div>
         </div>
       </Link>
+
       <Link href="/" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
