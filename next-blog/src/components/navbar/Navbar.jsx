@@ -22,7 +22,7 @@ const Navbar = () => {
         <ThemeToggle />
         {/* <AdminLink /> */}
         <Link href="/" className={styles.link}>Contact</Link>
-        <Link href="/" className={styles.link}>About</Link>
+        <Link href="/about" className={styles.link}>About</Link>
         <AuthLinks />
       </div>
     </div>

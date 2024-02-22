@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -15,16 +16,19 @@ const Featured = () => {
             />
         </div>
         <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}> 
+          {/* <h1 className={styles.postTitle}> 
             I'm a ...
-          </h1>
+          </h1> */}
           <h2 className={styles.postSubTitle}>
-            Tech enthusiast. Full Stack developer. Nature Lover. Cultured Traveler. Spirited Historian. Peace maker. Foodie. Tinker.
+          <span className={styles.postTitle}>I </span>
+          created this blog to further explore new concepts and technologies, to test my knowledge and skills, to document my triumphs and shortcomings and to learn from it all. Some posts are technical, others are experiential, and some are just memories. I hope you enjoyed whatever I put out there - into the ether.
           </h2>
+          <h3>-- [Sama]</h3>
+          <Link href='/about' className={styles.button}>Read More</Link>
           <p className={styles.postDesc}>
-          I created this blog to further explore new concepts and technologies, to test my knowledge and skills, to document my triumphs and shortcomings and to learn from it all. Some posts are technical, others are experiential, and some are just memories. I hope you enjoy whatever I put out there - into the ether.
+          "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.
           </p>
-          <button className={styles.button}>Read More</button>
+          <h4> --Isaac Asimov</h4>
         </div>
       </div>
     </div>
