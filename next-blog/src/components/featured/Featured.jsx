@@ -7,7 +7,12 @@ const Featured = () => {
     <div className={styles.container}>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src="/techbulb.jpeg" alt="" fill className={styles.image} />
+          <Image 
+            src="/techbulb.jpeg" 
+            alt="" fill
+            sizes="100vw, 50vw, 33vw"
+            className={styles.image} 
+            />
         </div>
         <div className={styles.textContainer}>
           <h1 className={styles.postTitle}> 

@@ -1,9 +1,10 @@
 .title{
-  background-color: coral;
-  color: white;
-  padding: 5px 10px;
+  /* background-color: coral; */
+  color: crimson;
+  /* padding: 5px 10px; */
   text-align: center;
   text-transform: capitalize;
+  /* -webkit-text-stroke: .5px black; */
 }
 
 .content{

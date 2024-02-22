@@ -94,7 +94,7 @@
 
 .imgContainer {
   flex: 1;
-  height: 500px;
+  height: 550px;
   position: relative;
 }
 
@@ -135,6 +135,7 @@
   .title {
     font-size: 72px;
   }
+
 }
 
 @media screen and (max-width: 1024px) {

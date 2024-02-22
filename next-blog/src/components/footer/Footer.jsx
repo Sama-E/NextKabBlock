@@ -10,8 +10,7 @@ const Footer = () => {
           <h1 className={styles.logoText}>Next Kab [Block]</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis.
+          Explore. Discover. Understand. Test. Document. Practice. Implement. Teach. 
         </p>
       </div>
       <div className={styles.links}>
