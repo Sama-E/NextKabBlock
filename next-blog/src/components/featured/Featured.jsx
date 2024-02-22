@@ -9,8 +9,8 @@ const Featured = () => {
         <div className={styles.imgContainer}>
           <Image 
             src="/techbulb.jpeg" 
-            alt="" fill
-            sizes="100vw, 50vw, 33vw"
+            alt="" 
+            fill
             className={styles.image} 
             />
         </div>
